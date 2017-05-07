@@ -44,7 +44,7 @@ test('Search should render correct amount of shows based on search', () => {
     }
   })
 
-  searchComponent.update()// then update the wrapper component
+  searchComponent.update()// then force re-rendering of the wrapper component
 
   const showCount = preload.shows.filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(searchWord.toUpperCase()) !== -1).length
 
